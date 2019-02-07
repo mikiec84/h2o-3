@@ -6,6 +6,9 @@ import hex.genmodel.descriptor.VariableImportances;
 
 import java.io.Serializable;
 
+import java.awt.*;
+import java.util.Map;
+
 public interface ModelDescriptor {
 
   String[][] scoringDomains();
@@ -37,6 +40,8 @@ public interface ModelDescriptor {
   double defaultThreshold();
 
   double[] priorClassDist();
+  
+  Map<String, Map<String, int[]>> targetEncodingMap();
 
   double[] modelClassDist();
 
