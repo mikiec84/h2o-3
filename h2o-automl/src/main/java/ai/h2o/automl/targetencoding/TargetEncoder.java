@@ -8,7 +8,6 @@ import water.rapids.Merge;
 import water.rapids.Rapids;
 import water.rapids.Val;
 import water.rapids.ast.prims.mungers.AstGroup;
-import water.util.FrameUtils;
 import water.util.Log;
 import static ai.h2o.automl.targetencoding.TargetEncoderFrameHelper.*;
 
