@@ -546,38 +546,38 @@ public class AstGroup extends AstPrimitive {
       }
       // This is a racy update into the node-local shared table of groups
       // print out all keySet in local
-      for (G rg:gs.keySet()) {
+/*     for (G rg:gs.keySet()) {
         String groupbyClass;
         if (Double.isNaN(rg._gs[0]))
           groupbyClass = "NaN";
         else
           groupbyClass = _fr.vec(13).domain()[(int)rg._gs[0]];
-        Log.info("@@@@@@ Before reduce chk idx: "+cs[0].cidx()+" class: "+groupbyClass+" local nrow: "+rg._dss[1][0]);
-      }
+        Log.info("@@@@@@ Before chk idx: "+cs[0].cidx()+" class: "+rg._gs[0]+" local nrow: "+rg._dss[1][0]);
+      } 
       for (G rg:_gss.keySet()) {
         String groupbyClass;
         if (Double.isNaN(rg._gs[0]))
           groupbyClass = "NaN";
         else
           groupbyClass = _fr.vec(13).domain()[(int)rg._gs[0]];
-        Log.info("@@@@@@ Before reduce chk idx: "+cs[0].cidx()+" class: "+groupbyClass+" global nrow: "+rg._dss[1][0]);
-      }
+        Log.info("@@@@@@ Before chk idx: "+cs[0].cidx()+" class: "+rg._gs[0]+" global nrow: "+rg._dss[1][0]);
+      }*/    
       reduce(gs);               // Atomically merge Group stats
       for (G rg:gs.keySet()) {
-        String groupbyClass;
+/*        String groupbyClass;
         if (Double.isNaN(rg._gs[0]))
           groupbyClass = "NaN";
         else
-          groupbyClass = _fr.vec(13).domain()[(int)rg._gs[0]];
-        Log.info("++++++ after reduce chk idx: "+cs[0].cidx()+" class: "+groupbyClass+" local nrow: "+rg._dss[1][0]);
+          groupbyClass = _fr.vec(13).domain()[(int)rg._gs[0]];*/
+        Log.info("++++++ after chk idx: "+cs[0].cidx()+" class: "+rg._gs[0]+" local nrow: "+rg._dss[1][0]);
       }
       for (G rg:_gss.keySet()) {
-        String groupbyClass;
+/*        String groupbyClass;
         if (Double.isNaN(rg._gs[0]))
           groupbyClass = "NaN";
         else
-          groupbyClass = _fr.vec(13).domain()[(int)rg._gs[0]];
-        Log.info("++++++ after reduce chk idx: "+cs[0].cidx()+" class: "+groupbyClass+" global nrow: "+rg._dss[1][0]);
+          groupbyClass = _fr.vec(13).domain()[(int)rg._gs[0]];*/
+        Log.info("++++++ after chk idx: "+cs[0].cidx()+" class: "+rg._gs[0]+" global nrow: "+rg._dss[1][0]);
       }
     }
 
