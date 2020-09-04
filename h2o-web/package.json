@@ -25,7 +25,7 @@
     "bower": "^1.8.8",
     "coffeescript": "^2.3.2",
     "diecut": "^0.0.1",
-    "marked": "^0.6.2",
+    "marked": "^1.1.1",
     "fiction": "^0.0.4",
     "fs-extra": "^7.0.1",
     "htmlparser2": "^3.10.0",
